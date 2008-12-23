@@ -1,0 +1,54 @@
+!!! Strict
+%html{html_attrs}
+  %head
+    %title Douglas Jarquin
+    %meta{ :name => 'keywords', :content => "douglas jarquin, douglas, jarquin" }
+    %meta{ :name => 'description', :content => "" }
+    %link{ :href => '/stylesheets/downwithsicko.css', :rel => 'stylesheet', :type => 'text/css' }
+    %link{ :href => '/images/favicon.ico', :rel => 'shortcut icon' }
+    %script{ 'type' => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" }
+    :javascript
+      $(function() {
+        var limit = 10 // how many repositories to list
+        var login = 'douglasjarquin' // your username
+ 
+        $.getJSON('http://github.com/api/v1/json/' + login + '?callback=?', function(data) {
+          var repositories = $.grep(data.user.repositories, function() {
+            return !this.fork
+          })
+ 
+          repositories.sort(function(a, b) {
+            return b.watchers - a.watchers
+          })
+ 
+          $.each(repositories.slice(0, limit), function() {
+            $('#repositories').append('<li><a href="' + this.url + '">' + this.name + '</a></li>')
+          })
+        })
+      })
+    :plain
+      <style type='text/css'>
+        body {
+          background: #ffffff;
+          margin: 0; }
+
+        #top {
+          color: #e31261;
+          padding: 0 0 0 20px; }
+
+          h1 {
+            font-size: 55px; }
+
+        #bottom {
+          background: #e31261;
+          padding: 0 0 0 20px; }
+      </style>
+  %body
+    #top
+      %h1
+        I am Douglas Jarquin and these are my GitHub repositories. Read my blog, stalk me, or hang out with me.
+    #bottom
+      %ul#repositories
+        %li
+          %h3
+            Repositories
