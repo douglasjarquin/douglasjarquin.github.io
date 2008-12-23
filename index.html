@@ -33,31 +33,48 @@
       body {
         background: #ffffff;
         margin: 0; }
+    
       #top {
         color: #e31261;
         padding: 0 0 0 20px; }
-        
-        h1 {
-          font-size: 50px; }
-      #bottom {
-        background: #e31261;
-        padding: 0 0 0 20px; }
+    
+        #top h1 {
+          font-size: 75px; }
+          
+          #top h1 a,
+          #top h1 a:hover {
+            color: #e31261;
+            text-decoration: none; }
+    
+      #bottom { }
+    
+        #bottom ul#repositories {
+          background: #e31261;
+          list-style-type: none;
+          margin: 0;
+          padding: 0; }
+    
+          #bottom ul#repositories li,
+          #bottom ul#repositories li a {
+            border-bottom: 1px solid #e5e5e5;
+            color: #e5e5e5;
+            font-size: 45px;
+            padding: 20px 0 20px 10px;
+            text-decoration: none; }
+    
+            #bottom ul#repositories li a:hover {
+              color: #fff;
+            }
     </style>
   </head>
   <body>
     <div id='top'>
       <h1>
-        I am Douglas Jarquin and these are my GitHub repositories. Read my blog, stalk me, or hang out with me.
+        I am Douglas Jarquin and these are my GitHub repositories. Read my <a href="http://douglasjarquin.com/">blog</a>, <a href="http://twitter.com/douglasjarquin">stalk me</a>, or <a href="http://ruby.meetup.com/71/">hang out with me</a>.
       </h1>
     </div>
     <div id='bottom'>
-      <ul id='repositories'>
-        <li>
-          <h3>
-            Repositories
-          </h3>
-        </li>
-      </ul>
+      <ul id='repositories'></ul>
     </div>
   </body>
 </html>
