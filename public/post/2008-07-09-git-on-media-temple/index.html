@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Git on Media Temple &middot; Douglas Jarquin </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Douglas Jarquin" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Douglas Jarquin</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Git on Media Temple</h1>
+  <span class="post-date">Wed, Jul 9, 2008</span>
+      
+
+<p>Unless you have been sleeping under a rock, which I hear is good for your health, you have come to hear about Git. Originally created by Linus Torvalds, Git is an open source version control system that has quickly gained a lot of traction with Rails developers. This could be credited to the great GitHub, but I think it is because of Git’s feature set. Visit the office Git website to learn more.</p>
+
+<p>At $20 a month Media-Temples Grid-Service is an incredible bargain. I make extensive use of all of it features, including the recently added ability to host Git repositories. What follows is a tutorial on how to host your Git repositories on Media Temple’s Grid-Service from Mac OS Leopard.</p>
+
+<p>Prerequisites</p>
+
+<p>Git 1.5.6.2
+Mac OS X Leopard
+Terminal Skills
+There are binaries available for installing Git on Mac OS X. Visit the git-osx-installer project on Google Code.</p>
+
+<p>Domain</p>
+
+<p>In order to be able to clone your repositories from the Grid over HTTP you need to create a domain specifically for Git. You can setup git.domain.com, but any domain will do. Remember to setup the domain in your Grid account. Without this you will only be able to clone Git repositories over ssh which is a pain.</p>
+
+<p>The project</p>
+
+<p>We are going to setup an example project called icecream-man. Change into a directory that is safe to work in and let’s get to it. If you already have a Git project setup you can skip this section.</p>
+
+<h1 id="toc_0">This is where I keep all of my projects</h1>
+
+<p>cd Sites/
+mkdir icecream-man
+cd icecream-man
+git init
+touch .gitignore
+git status
+git add .
+git commit -v -a</p>
+
+<p>Attack of the Clones</p>
+
+<p>Before we can push our local Git repositories to the Grid we have to create a bare clone. A short aside about what git means by bare: A default git repository assumes that you’ll be using it as your working directory, so git stores the actual bare repository files in a .git directory alongside all the project files. Remote repositories don’t need copies of the files on the filesystem unlike working copies, all they need are the deltas and binary what-nots of the repository itself. This is what bare means to git. Just the repository itself.</p>
+
+<p>cd Sites/
+git clone &ndash;bare icecream-man icecream-man.git
+touch icecream-man.git/git-daemon-export-ok</p>
+
+<p>Upload the repository</p>
+
+<p>To get the project on our Grid I use scp, but you could just as easily FTP the icecream-man.git directory into your Grid account.</p>
+
+<p>scp -r icecream-man.git serveradmin%s#####.gridserver.com@s#####.gridserver.com:domains/git.domain.com/html/icecream-man.git</p>
+
+<p>Now we have to ssh into our Grid account and finalize the setup.</p>
+
+<p>ssh serveradmin%s#####.gridserver.com@s#####.gridserver.com
+cd domains/git.domain.com/html/icecream-man.git
+git &ndash;bare update-server-info
+chmod a+x hooks/post-update</p>
+
+<p>Pulling</p>
+
+<p>Now we are ready to clone our Git repository from our Grid account. We are able to clone using a pretty URL thanks to our Git specific domain. Yeah!</p>
+
+<p>git clone <a href="http://git.domain.com/icecream-man.git">http://git.domain.com/icecream-man.git</a></p>
+
+<p>Pushing</p>
+
+<p>Once you have made some local commits that you want to push to the Grid you can use this command:</p>
+
+<p>git push ssh://serveradmin%s#####.gridserver.com@s#####.gridserver.com/home/#####/domains/git.domain.com/html/icecream-man.git master</p>
+
+<p>Here is what I do so that I do not have to type in that long command every time I want to push my changes to the remote Git repository. Git allows for each project to have multiple tracked repositories. Since we cloned our project from <a href="http://git.domain.com/icecream-man.git">http://git.domain.com/icecream-man.git</a> Git thinks it can push there to. Let’s add another remote repository and tell Git to push our changes there.</p>
+
+<p>cd Sites/icecream-man/
+git remote add grid ssh://serveradmin%s#####.gridserver.com@s#####.gridserver.com/home/#####/domains/git.domain.com/html/icecream-man.git</p>
+
+<p>Now we can push changes to our Grid account using git push grid master. Git knows that the remote repository named grid corresponds to the Grid’s push URL. Much better, I know. We can take this even further and create an alias for the command in our “.bash_login&rdquo; file. To view the available remote locations type &ldquo;git remote&rdquo; from inside the project directory. Then you can view the details of a remote repository by typing &ldquo;git remote show grid”. I use this very heavily, and am successfully hosting six active Git repositories on my Grid account. Without this tiny shortcut I do not think I would be able to do it, and I would be GitHub bound.</p>
+
+<p>References</p>
+
+<p>Using Git on the (gs) Grid-Server
+Git Documentation
+Setting up a new remote git repository</p>
+
+</div>
+</div>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

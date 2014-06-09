@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Start backing up your Mac to S3 in 5 minutes &middot; Douglas Jarquin </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Douglas Jarquin" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Douglas Jarquin</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Start backing up your Mac to S3 in 5 minutes</h1>
+  <span class="post-date">Sun, Aug 31, 2008</span>
+      <p>There are many tutorials out there on how to back up your Mac to Amazon S3, but over time this process has been simplified.</p>
+
+<p>Requisites</p>
+
+<p>Before we get started we will need a few things. Also, make sure you have your Amazon S3 access identifiers at hand. You can get those from your AWS account.</p>
+
+<p>Amazon S3 account
+Mac OS X Leopard
+Terminal Skills
+Back it up</p>
+
+<p>In order to keep this under five minutes I am simply going to list the steps required and not going to really go into any major detail.</p>
+
+<p>First</p>
+
+<p>Install the S3Sync Ruby Gem. Read more about Ruby Gems here.</p>
+
+<p>Second</p>
+
+<p>Add your Amazon access identifiers to the top of your .bash_login file.</p>
+
+<p>Third</p>
+
+<p>Execute the command to backup where my_backup_bucket is the name of your bucket.</p>
+
+<p>I personally do not like to schedule the backups with a cron because every time it runs I am doing something important. I suggest you create an alias for the command in your .bash_login file like this:</p>
+
+<p>Then all you have to do is type backup whenever you want to run this command. Easy.</p>
+
+<p>If the Terminal is not your kind of interface or your just want to backup a few folders of important files, I suggest you go with a full blown S3 file manager. Here are some of the applications I have used.</p>
+
+<p>Applications</p>
+
+<p>Flow
+Forklift
+S3Fox
+Transmit
+References</p>
+
+<p>Use Amazon S3 to automatically backup your mac
+Automatically backup you Mac to Amazon S3</p>
+
+</div>
+</div>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

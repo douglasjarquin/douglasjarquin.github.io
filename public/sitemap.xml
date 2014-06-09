@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2014-06-09T04:44:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/about</loc>
+    <lastmod>2014-06-09T04:44:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2012-08-22-i-almost-co-founded-github</loc>
+    <lastmod>2012-08-22T20:15:59-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2012-03-02-my-iphone-home-screen</loc>
+    <lastmod>2012-03-02T02:16:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2011-06-24-what-sucks-about-tuexduex</loc>
+    <lastmod>2011-06-24T22:27:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2011-06-24-poor-mans-git-hosting</loc>
+    <lastmod>2011-06-24T22:23:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2011-06-16-what-is-your-favorite-inanimate-object</loc>
+    <lastmod>2011-06-16T16:38:56-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2011-06-14-updating-all-outdated-homebrew-packages</loc>
+    <lastmod>2011-06-14T14:11:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2011-05-19-installing-rvm-on-mac-os-x-10-6</loc>
+    <lastmod>2011-05-19T16:43:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2010-09-19-hidden-ipod-controls-on-iphone-4</loc>
+    <lastmod>2010-09-19T22:46:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2010-09-08-backup-navicat-with-dropbox</loc>
+    <lastmod>2010-09-08T16:01:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-09-13-melissa-is-well-into-labor-now</loc>
+    <lastmod>2008-09-13T09:11:07-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-09-08-just-installed-django-again-and-boy-did-i-miss-it</loc>
+    <lastmod>2008-09-08T03:43:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-09-05-how-to-add-a-cakephp-book-to-coda</loc>
+    <lastmod>2008-09-05T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-09-04-just-set-up-mysql-replication</loc>
+    <lastmod>2008-09-04T11:56:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-09-04-just-setup-feedburner-curious-as-to-how-many</loc>
+    <lastmod>2008-09-04T10:16:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-09-04-why-google-chrome-is-great-for-safari</loc>
+    <lastmod>2008-09-04T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-09-03-melissa-did-not-let-me-take-pictures-of-her-during</loc>
+    <lastmod>2008-09-03T22:17:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-09-03-watched-season-1-episode-3-and-4-of-lost</loc>
+    <lastmod>2008-09-03T21:19:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-09-03-just-setup-neighborly-cron-jobs-on-all-of-my</loc>
+    <lastmod>2008-09-03T12:31:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-08-31-start-backing-up-your-mac-to-s3-in-5-minutes</loc>
+    <lastmod>2008-08-31T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-08-14-stones-brings-go-to-the-iphone</loc>
+    <lastmod>2008-08-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-08-04-java-and-tomcat-on-ubuntu-hardy</loc>
+    <lastmod>2008-08-04T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-08-04-quickbooks-online-is-retarded</loc>
+    <lastmod>2008-08-04T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-07-09-git-on-media-temple</loc>
+    <lastmod>2008-07-09T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-06-17-if-i-have-to-be-smarter-to-use-your-technology</loc>
+    <lastmod>2008-06-17T15:29:27-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-05-30-tim-ferris-talks-with-some-great-minds</loc>
+    <lastmod>2008-05-30T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-05-29-ripped-digg-com</loc>
+    <lastmod>2008-05-29T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-29-the-most-useful-ruby-gem</loc>
+    <lastmod>2008-04-29T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-17-gary-vaynerchuks-book-release</loc>
+    <lastmod>2008-04-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-16-a-better-way-to-share-files</loc>
+    <lastmod>2008-04-16T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-15-lighthouse-2-0-is-out</loc>
+    <lastmod>2008-04-15T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-14-free-domain-djangopodcast-com</loc>
+    <lastmod>2008-04-14T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-13-mindnode-mind-mapping</loc>
+    <lastmod>2008-04-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-04-04-better-volume-control-on-mac-os-x</loc>
+    <lastmod>2008-04-04T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-03-25-stop-supporting-internet-explorer-6</loc>
+    <lastmod>2008-03-25T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-02-26-building-git-on-mac-os-x</loc>
+    <lastmod>2008-02-26T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-02-17-screenflow</loc>
+    <lastmod>2008-02-17T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2008-02-17-the-bash-login-file</loc>
+    <lastmod>2008-02-17T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-11-18-mephisto-on-media-temple</loc>
+    <lastmod>2007-11-18T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-11-09-dont-ever-argue-with-an-idiot-theyll-drag-you</loc>
+    <lastmod>2007-11-09T13:48:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-11-07-may-medicine-be-your-food-and-food-be-your</loc>
+    <lastmod>2007-11-07T15:52:31-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-11-07-only-a-fool-looks-at-a-finger-that-points-to-the</loc>
+    <lastmod>2007-11-07T15:45:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-11-01-what-we-fear-doing-most-is-usually-what-we-most</loc>
+    <lastmod>2007-11-01T20:32:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-10-28-subversion-on-media-temple</loc>
+    <lastmod>2007-10-28T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-10-17-beast-on-media-temple</loc>
+    <lastmod>2007-10-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-10-17-radiohead-makes-millions-selling-a-free-album</loc>
+    <lastmod>2007-10-17T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-09-21-people-never-get-the-flowers-while-they-can-still</loc>
+    <lastmod>2007-09-21T16:57:34-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-09-16-even-god-has-a-logo</loc>
+    <lastmod>2007-09-16T21:10:34-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-09-16-look-after-your-cents-and-the-dollars-will-look</loc>
+    <lastmod>2007-09-16T15:02:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-08-23-a-wise-man-should-have-money-in-his-head-but-not</loc>
+    <lastmod>2007-08-23T11:54:38-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-08-16-dont-break-the-chain</loc>
+    <lastmod>2007-08-16T03:01:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-08-07-harder-better-faster-stronger</loc>
+    <lastmod>2007-08-07T20:38:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-08-01-if-you-can-then-you-must-if-you-must-then-you</loc>
+    <lastmod>2007-08-01T03:18:59-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-07-22-either-write-something-worth-reading-or-do</loc>
+    <lastmod>2007-07-22T02:48:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-07-17-the-most-effective-way-to-do-it-is-to-do-it</loc>
+    <lastmod>2007-07-17T00:34:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-07-16-if-youre-going-to-be-dumb-you-gotta-be-tough</loc>
+    <lastmod>2007-07-16T00:22:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-07-13-unicode-django-and-textile</loc>
+    <lastmod>2007-07-13T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-07-12-i-am-not-bound-to-please-thee-with-my-answers</loc>
+    <lastmod>2007-07-12T19:04:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-07-12-did-you-say-databrowse</loc>
+    <lastmod>2007-07-12T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-07-09-i-never-think-of-the-future-it-comes-soon</loc>
+    <lastmod>2007-07-09T22:29:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-06-26-beer-is-living-proof-that-god-loves-us-and-wants</loc>
+    <lastmod>2007-06-26T21:08:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-06-23-genius-without-education-is-like-silver-in-the</loc>
+    <lastmod>2007-06-23T01:38:07-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2007-06-22-keep-clear</loc>
+    <lastmod>2007-06-22T14:53:52-04:00</lastmod>
+  </url>
+  
+</urlset>

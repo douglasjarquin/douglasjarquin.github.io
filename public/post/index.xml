@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Posts on Douglas Jarquin </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/post/index.xml</link>
+    <language>en-us</language>
+    
+    
+    <updated>Wed, 22 Aug 2012 20:15:59 EDT</updated>
+    
+    <item>
+      <title>I almost co-founded GitHub</title>
+      <link>http://localhost:1313/post/2012-08-22-i-almost-co-founded-github</link>
+      <pubDate>Wed, 22 Aug 2012 20:15:59 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-08-22-i-almost-co-founded-github</guid>
+      <description>&lt;p&gt;The Truth&lt;/p&gt;
+
+&lt;p&gt;Okay, that title is a bit misleading. I mean, how do you almost co-found one of the most important technology businesses of our time, yet be basically unknown in the technology industry.&lt;/p&gt;
+
+&lt;p&gt;Yes, I am just a rat race running, weekend entrepreneur. No, I didn’t exactly “almost” co-found GitHub, but I really do think I had an opportunity to. This is the story of how I missed that opportunity.&lt;/p&gt;
+
+&lt;p&gt;The Story&lt;/p&gt;
+
+&lt;p&gt;It was about 5 years ago today, and Rails was just beginning to make its now historical mark on the development world. During my research, I came across a blog app written in Rails named Ozimodo. It was one of the first, and especially in the beginning, it was raw.&lt;/p&gt;
+
+&lt;p&gt;You’ve got to understand, the Rails community at this time was still new. There were many frustrations still to be had, and there was no GitHub to enable painless collaboration.&lt;/p&gt;
+
+&lt;p&gt;I downloaded the source code off of SourceForge, and made some improvements. Today, I would make a Pull Request, my work might be merged, and I would be honored as a committer. So what did I do when I made some improvements to the app? Well, I emailed the developer. And who was this developer? None other than Chris Wanstrath.&lt;/p&gt;
+
+&lt;p&gt;I had a couple of app improvements, and I also completely refactored the templates removing the old school table based layouts that Chris was using. In my email I explained that, but Chris wanted to know how I did what I did.&lt;/p&gt;
+
+&lt;p&gt;I vividly remember starting to write the reply, then letting something else have my attention. To my dismay, I never finished the email.&lt;/p&gt;
+
+&lt;p&gt;I never got to show Chris my skills. I never got to network with him. I never got to learn from him. And then of course, I never got to co-found GitHub with him.&lt;/p&gt;
+
+&lt;p&gt;The Moral&lt;/p&gt;
+
+&lt;p&gt;Use the tools we have today to show off your work. Fork a hugely important project, and commit something meaningful. Let other developers see your work, get feedback, and learn from them. It’s now easier than ever, and you never know what that commit might lead to. A new job, a resume bullet point, or maybe a future business partner.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My iPhone Home Screen</title>
+      <link>http://localhost:1313/post/2012-03-02-my-iphone-home-screen</link>
+      <pubDate>Fri, 02 Mar 2012 02:16:00 EST</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-03-02-my-iphone-home-screen</guid>
+      <description>&lt;p&gt;My home screen, inspired by this Signal vs. Noise post.&lt;/p&gt;
+
+&lt;p&gt;You’ll notice the following:&lt;/p&gt;
+
+&lt;p&gt;None of my apps have badges.
+I leave the fourth row empty so that I can use it to scroll.
+Links to apps:&lt;/p&gt;
+
+&lt;p&gt;Calendar
+Clear
+Day One
+Desk
+Evernote Food
+Gaug.es
+GitHub Issues
+Nezumi
+Pastebot
+Simplenote
+Tumblr
+Tweetbot&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What sucks about TuexDuex</title>
+      <link>http://localhost:1313/post/2011-06-24-what-sucks-about-tuexduex</link>
+      <pubDate>Fri, 24 Jun 2011 22:27:00 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2011-06-24-what-sucks-about-tuexduex</guid>
+      <description>&lt;p&gt;I wrote this a while ago, and have since moved on to using Flow by MetaLab, but I thought I would share my list anyway.&lt;/p&gt;
+
+&lt;p&gt;Lack of a “today” view.
+No print stylesheets.
+No way to export data.
+The dumb sync function of the iphone app.
+Lack of an iPad interface&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Poor man&#39;s Git hosting</title>
+      <link>http://localhost:1313/post/2011-06-24-poor-mans-git-hosting</link>
+      <pubDate>Fri, 24 Jun 2011 22:23:00 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2011-06-24-poor-mans-git-hosting</guid>
+      <description>&lt;p&gt;For those who don’t know me, I am very cheap. Actually, it’s a point of pride, and something I reflect in a positive light. I don’t think it’s bad to be frugal. This is true for the way I host my Git repositories too.&lt;/p&gt;
+
+&lt;p&gt;At any given time I have a dozen of so tiny repositories filled with little experiments of mine. Instead of paying $300 a year, I just stick them in my free Dropbox account.&lt;/p&gt;
+
+&lt;p&gt;Up&lt;/p&gt;
+
+&lt;p&gt;From your git working directory:&lt;/p&gt;
+
+&lt;p&gt;Then, to push your changes to Dropbox, just run:&lt;/p&gt;
+
+&lt;p&gt;Obviously, change out master for your branch name. Alternatively, you could set th branch to track from Dropbox by default with:&lt;/p&gt;
+
+&lt;p&gt;Down&lt;/p&gt;
+
+&lt;p&gt;Once your repository lives in Dropbox, cloning it is as simple as:&lt;/p&gt;
+
+&lt;p&gt;If you want to have a dropbox remote instead of the default origin run:&lt;/p&gt;
+
+&lt;p&gt;Pushing up changes follows the same steps listed above, and this all works for shared directories, too.&lt;/p&gt;
+
+&lt;p&gt;Shout Outs&lt;/p&gt;
+
+&lt;p&gt;I can’t take credit for any of this, so below are the multiple sources where I pieced this together from.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://solutions.treypiepmeier.com/2010/02/22/using-dropbox-to-share-git-repositories/&#34;&gt;http://solutions.treypiepmeier.com/2010/02/22/using-dropbox-to-share-git-repositories/&lt;/a&gt;
+&lt;a href=&#34;http://www.cimgf.com/2008/06/03/version-control-makes-you-a-better-programmer/&#34;&gt;http://www.cimgf.com/2008/06/03/version-control-makes-you-a-better-programmer/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WHAT IS YOUR FAVORITE INANIMATE OBJECT?</title>
+      <link>http://localhost:1313/post/2011-06-16-what-is-your-favorite-inanimate-object</link>
+      <pubDate>Thu, 16 Jun 2011 16:38:56 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2011-06-16-what-is-your-favorite-inanimate-object</guid>
+      <description>&lt;p&gt;So, after a quick Google search, I was reminded that “inanimate” basically means without life. Know that I understand the question, my favorite inanimate object is my iPhone. I use it everyday, and it has become a hugely important part of me.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Updating all outdated Homebrew packages</title>
+      <link>http://localhost:1313/post/2011-06-14-updating-all-outdated-homebrew-packages</link>
+      <pubDate>Tue, 14 Jun 2011 14:11:00 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2011-06-14-updating-all-outdated-homebrew-packages</guid>
+      <description>&lt;p&gt;I am not sure why this isn’t built-in to Homebrew, but if you frequently want to update all outdated packages like I do, this command should help out:&lt;/p&gt;
+
+&lt;p&gt;Maybe I should contribute a similar command?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Installing RVM on Mac OS X 10.6</title>
+      <link>http://localhost:1313/post/2011-05-19-installing-rvm-on-mac-os-x-10-6</link>
+      <pubDate>Thu, 19 May 2011 16:43:00 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2011-05-19-installing-rvm-on-mac-os-x-10-6</guid>
+      <description>&lt;p&gt;I recently got a new MacBook Pro, and haven’t gotten around to installing RVM yet. So when I took on this task today, I was totally surprised buy the issues I faced.&lt;/p&gt;
+
+&lt;p&gt;Prerequisites&lt;/p&gt;
+
+&lt;p&gt;Git
+Terminal chops
+Installation&lt;/p&gt;
+
+&lt;p&gt;The default installation method is the easiest, so I suggest you follow it. As documented on the official RVM site, just use this one-liner:&lt;/p&gt;
+
+&lt;p&gt;That’s it, or so I thought.&lt;/p&gt;
+
+&lt;p&gt;Caveats&lt;/p&gt;
+
+&lt;p&gt;RVM will likely not work as expected&lt;/p&gt;
+
+&lt;p&gt;I kept getting the following error messages:&lt;/p&gt;
+
+&lt;p&gt;Not exactly sure what is causing it yet, but the solution is to remove RVM, and retry the installation.&lt;/p&gt;
+
+&lt;p&gt;I actually had to repeat this process four times before I did not see these errors anymore.&lt;/p&gt;
+
+&lt;p&gt;Command not found&lt;/p&gt;
+
+&lt;p&gt;The next problem I faced was that the rvm command wasn’t in my path. Luckily, I found the executable after a quick search. It lives at:&lt;/p&gt;
+
+&lt;p&gt;However, simply adding that to your path isn’t the solution. It actually didn’t even work for me. Instead, add the following to your .bashrc or .zshrc, respectively.&lt;/p&gt;
+
+&lt;p&gt;Bash&lt;/p&gt;
+
+&lt;p&gt;ZSH&lt;/p&gt;
+
+&lt;p&gt;Conclusion&lt;/p&gt;
+
+&lt;p&gt;So, my curious side wants to know exactly why this is happening, but I got nowhere. Some have solved the problem by setting some permissions, but that solutions seemed to hacky for me.&lt;/p&gt;
+
+&lt;p&gt;Hope it helps.&lt;/p&gt;
+
+&lt;p&gt;References&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/965395&#34;&gt;https://gist.github.com/965395&lt;/a&gt;
+&lt;a href=&#34;http://episko.posterous.com/brew-zsh-git-and-rvm&#34;&gt;http://episko.posterous.com/brew-zsh-git-and-rvm&lt;/a&gt;
+&lt;a href=&#34;http://gabebw.wordpress.com/2010/08/02/rails-vim-rvm-and-a-curious-infuriating-bug/&#34;&gt;http://gabebw.wordpress.com/2010/08/02/rails-vim-rvm-and-a-curious-infuriating-bug/&lt;/a&gt;
+&lt;a href=&#34;http://stackoverflow.com/questions/4755538/rvm-is-not-working-in-zsh&#34;&gt;http://stackoverflow.com/questions/4755538/rvm-is-not-working-in-zsh&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hidden iPod controls on iPhone 4.</title>
+      <link>http://localhost:1313/post/2010-09-19-hidden-ipod-controls-on-iphone-4</link>
+      <pubDate>Sun, 19 Sep 2010 22:46:05 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2010-09-19-hidden-ipod-controls-on-iphone-4</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Backup Navicat with Dropbox</title>
+      <link>http://localhost:1313/post/2010-09-08-backup-navicat-with-dropbox</link>
+      <pubDate>Wed, 08 Sep 2010 16:01:00 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2010-09-08-backup-navicat-with-dropbox</guid>
+      <description>&lt;p&gt;I recently started using Navicat for MySQL as my Mac database administration application of choice, and quickly wondered how I could back up my data. Particularly, Navicat has a great query interface, and in a few days I compiled 27 queries that I really did not want to have to rebuild.&lt;/p&gt;
+
+&lt;p&gt;Without over engineering a solution, and since there is no sensitive data to worry about as passwords are stored in Keychain, I decided to backup with Dropbox (referral link). I couldn’t move the directory into my Dropbox directory, which is my preferred method, so I went the symlink route.&lt;/p&gt;
+
+&lt;p&gt;Note: Replace the word username above with your username.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/2008-09-13-melissa-is-well-into-labor-now</link>
+      <pubDate>Sat, 13 Sep 2008 09:11:07 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2008-09-13-melissa-is-well-into-labor-now</guid>
+      <description>&lt;p&gt;Melissa is well into labor now.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/2008-09-08-just-installed-django-again-and-boy-did-i-miss-it</link>
+      <pubDate>Mon, 08 Sep 2008 03:43:13 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2008-09-08-just-installed-django-again-and-boy-did-i-miss-it</guid>
+      <description>&lt;p&gt;Just installed Django again and boy did I miss it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to add a CakePHP book to Coda</title>
+      <link>http://localhost:1313/post/2008-09-05-how-to-add-a-cakephp-book-to-coda</link>
+      <pubDate>Fri, 05 Sep 2008 00:00:00 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2008-09-05-how-to-add-a-cakephp-book-to-coda</guid>
+      <description>&lt;p&gt;I have to use PHP at work so I have been eyeing the CakePHP framework. Although it is nowhere near Rails in my opinion is does have some documentation and a big enough community. As my PHP development tool of choice I use Coda, from Panic. I know one of the latest features of Coda 1.5 was the ability to add your own Books so I thought I would write about how I setup a CakePHP book.&lt;/p&gt;
+
+&lt;p&gt;The assets&lt;/p&gt;
+
+&lt;p&gt;First, lets download the CakePHP Book logo I threw together. It took me awhile to get the image to align correctly in Coda, but if you have a better one let me know.&lt;/p&gt;
+
+&lt;p&gt;cake-book-logo.png.zip
+My inspiration came from the small CakePHP book on the “Learn” tab of the homepage.&lt;/p&gt;
+
+&lt;p&gt;Settings&lt;/p&gt;
+
+&lt;p&gt;Now in Coda, click “Books” and then the “+” sign at the bottom to add a new book. Make sure your settings match this:&lt;/p&gt;
+
+&lt;p&gt;Note: You have to click and drag the image into the “Cover Image” box to apply the graphic.&lt;/p&gt;
+
+&lt;p&gt;Results&lt;/p&gt;
+
+&lt;p&gt;Hit “OK” and voila. Your very own CakePHP Book right in Coda.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/2008-09-04-just-set-up-mysql-replication</link>
+      <pubDate>Thu, 04 Sep 2008 11:56:37 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2008-09-04-just-set-up-mysql-replication</guid>
+      <description>&lt;p&gt;Just set up MySQL replication.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/2008-09-04-just-setup-feedburner-curious-as-to-how-many</link>
+      <pubDate>Thu, 04 Sep 2008 10:16:00 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2008-09-04-just-setup-feedburner-curious-as-to-how-many</guid>
+      <description>&lt;p&gt;Just setup Feedburner. Curious as to how many people have stumbled onto this site.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why Google Chrome is great for Safari</title>
+      <link>http://localhost:1313/post/2008-09-04-why-google-chrome-is-great-for-safari</link>
+      <pubDate>Thu, 04 Sep 2008 00:00:00 EDT</pubDate>
+      
+      <guid>http://localhost:1313/post/2008-09-04-why-google-chrome-is-great-for-safari</guid>
+      <description>&lt;p&gt;Google Chrome is the new browser on the block, and boy is it getting all the neighborhood girls excited. I am sure you can find some entertaining article about why Google Chrome will rule the world, but I am going to tell you why I like it. Webkit. Yes, Google Chrome uses the exact same rendering engine as Safari which is my browser of choice, mobile Safari, and Android. This means that any site that renders well in Safari will look the same in Google Chrome.&lt;/p&gt;
+
+&lt;p&gt;What this also means is that if the adoption of Google Chrome is high enough, which it will be, web designers all over the world can finally give IE the boot. I see the signs already, “This site works fine in Firefox, Safari, or Chrome.” That’s three choices other than IE.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

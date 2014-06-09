@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Installing RVM on Mac OS X 10.6 &middot; Douglas Jarquin </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Douglas Jarquin" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Douglas Jarquin</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Installing RVM on Mac OS X 10.6</h1>
+  <span class="post-date">Thu, May 19, 2011</span>
+      <p>I recently got a new MacBook Pro, and haven’t gotten around to installing RVM yet. So when I took on this task today, I was totally surprised buy the issues I faced.</p>
+
+<p>Prerequisites</p>
+
+<p>Git
+Terminal chops
+Installation</p>
+
+<p>The default installation method is the easiest, so I suggest you follow it. As documented on the official RVM site, just use this one-liner:</p>
+
+<p>That’s it, or so I thought.</p>
+
+<p>Caveats</p>
+
+<p>RVM will likely not work as expected</p>
+
+<p>I kept getting the following error messages:</p>
+
+<p>Not exactly sure what is causing it yet, but the solution is to remove RVM, and retry the installation.</p>
+
+<p>I actually had to repeat this process four times before I did not see these errors anymore.</p>
+
+<p>Command not found</p>
+
+<p>The next problem I faced was that the rvm command wasn’t in my path. Luckily, I found the executable after a quick search. It lives at:</p>
+
+<p>However, simply adding that to your path isn’t the solution. It actually didn’t even work for me. Instead, add the following to your .bashrc or .zshrc, respectively.</p>
+
+<p>Bash</p>
+
+<p>ZSH</p>
+
+<p>Conclusion</p>
+
+<p>So, my curious side wants to know exactly why this is happening, but I got nowhere. Some have solved the problem by setting some permissions, but that solutions seemed to hacky for me.</p>
+
+<p>Hope it helps.</p>
+
+<p>References</p>
+
+<p><a href="https://gist.github.com/965395">https://gist.github.com/965395</a>
+<a href="http://episko.posterous.com/brew-zsh-git-and-rvm">http://episko.posterous.com/brew-zsh-git-and-rvm</a>
+<a href="http://gabebw.wordpress.com/2010/08/02/rails-vim-rvm-and-a-curious-infuriating-bug/">http://gabebw.wordpress.com/2010/08/02/rails-vim-rvm-and-a-curious-infuriating-bug/</a>
+<a href="http://stackoverflow.com/questions/4755538/rvm-is-not-working-in-zsh">http://stackoverflow.com/questions/4755538/rvm-is-not-working-in-zsh</a></p>
+
+</div>
+</div>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

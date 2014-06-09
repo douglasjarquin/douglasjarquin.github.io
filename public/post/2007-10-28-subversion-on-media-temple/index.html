@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Subversion on Media Temple &middot; Douglas Jarquin </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Douglas Jarquin" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Douglas Jarquin</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Subversion on Media Temple</h1>
+  <span class="post-date">Sun, Oct 28, 2007</span>
+      <p>Using Subversion on the Media Temple Grid-Service is much easier than it seems. Actually, it is easier than my previous host.</p>
+
+<p>Setup the repository</p>
+
+<p>ssh serveradmin%domain.com@domain.com *<em>OS X
+Terminalserveradmin@domain.com </em>*Windows
+cd data
+mkdir svn &amp;&amp; cd svn
+svnadmin create &ndash;fs-type fsfs reponame</p>
+
+<p>Initial import</p>
+
+<p>On your local machine.</p>
+
+<p>mkdir reponame &amp;&amp; cd reponame
+mkdir trunk
+mkdir tags
+mkdir branches
+svn import . svn+ssh://serveradmin%domain.com@s#####.gridserver.com/home/#####/data/svn/reponame/ -m &ldquo;Initial import&rdquo;</p>
+
+<p>Checking out</p>
+
+<p>Now that we have our subversion repository setup and our code checked in, we should check out a copy for development.</p>
+
+<p>svn co svn+ssh://serveradmin%domain.com@s#####.gridserver.com/home/#####/data/svn/reponame/trunk reponame</p>
+
+<p>Deployment</p>
+
+<p>If you are going to deploy your website from a local subversion repository.</p>
+
+<p>ssh serveradmin%domain.com@domain.com *<em>OS X Terminalserveradmin@domain.com </em>*Windows
+cd domains
+cd domain.com
+mv html html-2
+svn co file:///home/#####/data/svn/reponame/trunk html</p>
+
+<p>That does it. Rinse and repeat as needed.</p>
+
+<p>References</p>
+
+<p>Setup a Subversion repository
+A Novices Tutorial on Subversion</p>
+
+</div>
+</div>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
