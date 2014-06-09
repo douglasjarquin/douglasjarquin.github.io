@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Did you say Databrowse? &middot; Douglas Jarquin </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Douglas Jarquin" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Douglas Jarquin</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Did you say Databrowse?</h1>
+  <span class="post-date">Thu, Jul 12, 2007</span>
+      
+
+<p>Databrowse is a Django application that basically lets you browse your data. You can define which models you want to browse and they are then exposed to Databrowse. Besides being very pretty, Databrowse has come in very handy. And since it is so easy to setup, you can see for yourself in just a few minutes.</p>
+
+<p>Setup</p>
+
+<p>Installing Databrowse is a snap. You could use the documentation, but I want to show you how I did it and save you some time.</p>
+
+<p>First add django.contrib.databrowse to your INSTALLED_APPS setting.</p>
+
+<p>{% highlight python %}</p>
+
+<p>Add ‘django.contrib.databrowse’ to your INSTALLED_APPS</p>
+
+<p>&ldquo;django.contrib.databrowse&rdquo;,
+{% endhighlight %}</p>
+
+<p>Now you need to register your models with Databrowse. I did this in my root urls.py, however I plan to try to move the code in to the individual apps once I can figure out how.</p>
+
+<h1 id="toc_0">Import your model classes in your root urls.py</h1>
+
+<p>from apps.blog.models import Entry</p>
+
+<p>Now we register those models with Databrowse.</p>
+
+<h1 id="toc_1">Register your models with Databrowse</h1>
+
+<h1 id="toc_2">I put this right after my import statements</h1>
+
+<h1 id="toc_3">Entry corresponds with &ldquo;from apps.blog.models import Entry&rdquo;</h1>
+
+<p>databrowse.site.register(Entry)
+databrowse.site.register(Project)</p>
+
+<p>Last but not least you need to give your Databrowse app a url.</p>
+
+<h1 id="toc_4">You can give it any name you wish</h1>
+
+<p>(r&rdquo;^databrowse/(.*)&ldquo;, databrowse.site.root),</p>
+
+<p>Now visit your Databrowse url and enjoy looking inside your data.</p>
+
+</div>
+</div>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

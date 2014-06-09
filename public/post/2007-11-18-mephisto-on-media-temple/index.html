@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Mephisto on Media Temple &middot; Douglas Jarquin </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Douglas Jarquin" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Douglas Jarquin</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Mephisto on Media Temple</h1>
+  <span class="post-date">Sun, Nov 18, 2007</span>
+      <p>At $20 a month, Media Temple’s Grid-Service is an incredible bargain. I recently broke up with Django and decided to move my work back to Ruby on Rails. What follows is another tentative guide to installing Mephisto on Media Temple’s Grid Service.</p>
+
+<p>First things first</p>
+
+<p>Enable Rails container</p>
+
+<p>Log in to your (mt) account center and select your primary domain.
+Click into the “(gs) GridContainers” section.
+Click the “manage” link for the Rails GridContainer.
+Click ‘Enable Container’.
+Note: You will need about 45 MB of ram dedicated to Mephisto.</p>
+
+<p>Create the database</p>
+
+<p>Click into the ‘Manage Databases’ section.
+Click the ‘Add A Database’ tab.
+Give your database a name and select a database type.
+Click ‘Next’.
+Setting up Ruby on Rails</p>
+
+<p>ssh serveradmin%domain.com@domain.com *<em>OS X Terminal
+serveradmin@domain.com </em><em>Windows
+mtr generate_config </em>*serveradmin@domain.com and password
+mtr setup_rubygems
+source ~/.bash_profile
+gem install rails -y
+gem install mysql &ndash;source=<a href="http://gems.mediatemple.net">http://gems.mediatemple.net</a>
+gem install postgres &ndash;source=<a href="http://gems.mediatemple.netrngem">http://gems.mediatemple.netrngem</a> install daemons gem_plugin -y
+gem install mongrel &ndash;source=<a href="http://gems.mediatemple.net">http://gems.mediatemple.net</a></p>
+
+<p>Install Mephisto</p>
+
+<p>cd $HOME/../../containers
+mkdir rails &amp;&amp; cd rails
+svn co -r 2920 <a href="http://svn.techno-weenie.net/projects/mephisto/trunk">http://svn.techno-weenie.net/projects/mephisto/trunk</a> mephisto
+cd mephisto
+gem install tzinfo &ndash;remote
+cp config/database.example.yml config/database.yml</p>
+
+<p>Note: Here we checkout revision 2920 instead of the head. 2920 is the latest revision of Mephisto to work without rails edge, although the 0.7.3 release was revision 2501.</p>
+
+<p>Initialize Mephisto</p>
+
+<p>rake db:bootstrap RAILS_ENV=production
+mtr add mephisto $PWD domain.com
+mtr start mephisto
+mtr generate_htaccess mephisto
+mtr create_link mephisto domain.com</p>
+
+<p>Note: We do not have to manually create the log directory. It is automatically created when we rake the db.</p>
+
+<p>That’s it! Now visit yourdomain.com to see our result.</p>
+
+<p>References</p>
+
+<p>Mephisto on Media Temple
+Initial Setup of Ruby on Rails on (RoR) Container</p>
+
+</div>
+</div>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

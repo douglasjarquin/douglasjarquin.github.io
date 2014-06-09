@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Beast on Media Temple &middot; Douglas Jarquin </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Douglas Jarquin" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Douglas Jarquin</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Beast on Media Temple</h1>
+  <span class="post-date">Wed, Oct 17, 2007</span>
+      
+
+<p>What follows is a tentative guide to installing Beast, a forum application written in Ruby on Rails, on Media Temple Grid-Service.</p>
+
+<p>First things first</p>
+
+<p>Enable Rails container</p>
+
+<p>Log in to your (mt) account center and select your primary domain.
+Click into the “(gs) GridContainers” section.
+Click the “manage” link for the Rails GridContainer.
+Click “Enable Container”.
+Note: You will need about 35 MB of ram for Beast.</p>
+
+<p>Create database</p>
+
+<p>Click into the “Manage Databases” section.
+Click the “Add A Database” tab.
+Give your database a name and select a database type.
+Click “Next”
+Setup email</p>
+
+<p>You must have a beast@domain.com user setup for sending activation emails.</p>
+
+<p>Setting up Ruby on Rails</p>
+
+<p>ssh serveradmin%domain.com@domain.com *<em>OS X Terminal
+serveradmin@domain.com </em><em>Windows
+mtr generate_config </em>*serveradmin@domain.com and password
+mtr setup_rubygemssource ~/.bash_profile
+gem install rails -y
+gem install mysql &ndash;source=<a href="http://gems.mediatemple.net">http://gems.mediatemple.net</a>
+gem install postgres &ndash;source=<a href="http://gems.mediatemple.net">http://gems.mediatemple.net</a>
+gem install daemons gem_plugin -y
+gem install mongrel &ndash;source=<a href="http://gems.mediatemple.net">http://gems.mediatemple.net</a></p>
+
+<p>Installing the Beast</p>
+
+<p>cd $HOME/../../containers
+mkdir rails &amp;&amp; cd rails
+svn co -r 2873 <a href="http://svn.techno-weenie.net/projects/beast/trunk">http://svn.techno-weenie.net/projects/beast/trunk</a> beast
+cd beast
+gem install RedCloth
+gem install ruby-openid
+cp config/database.example.yml config/database.yml</p>
+
+<p>Note: Instead of installing beast from the stable 1.0 branch we checkout revision 2873 from the trunk. This way we can update to stable versions of the trunk without having to worry about merging branches. Stable 1.0 is actually revision 2907, but I have not been able to install it successfully.</p>
+
+<p>Edit database.yml</p>
+
+<p>production:
+adapter: mysql
+database: db#####_beast_production
+username: db#####
+password: xxxxxxx
+host: internal-db.s#####.gridserver.com</p>
+
+<p>Edit environment.rb</p>
+
+<p>Add your email settings to the end of the beast/config/environment.rb file.</p>
+
+<h1 id="toc_0">email settings</h1>
+
+<p>ActionMailer::Base.smtp_settings = {
+  :address =&gt; &ldquo;mail.domain.com&rdquo;,
+  :port =&gt; 25,
+  :domain =&gt; &ldquo;domain.com&rdquo;,
+  :authentication =&gt; :login,
+  :user_name =&gt; &ldquo;beast@domain.com&rdquo;,
+  :password =&gt; &ldquo;xxxxxxx&rdquo;
+}</p>
+
+<p>Initialize Beast</p>
+
+<p>rake db:schema:load RAILS_ENV=production
+mtr add beast $PWD domain.com
+mtr start beast
+mtr generate_htaccess beast
+mtr create_link beast domain.com</p>
+
+<p>References</p>
+
+<p>Mephisto on Media Temple
+Initial Setup of Ruby on Rails on (RoR) Container
+Sending Mail with Ruby on Rails
+Getting Started with Beast
+You can now see a working example by visiting <a href="http://yourdomain.com">http://yourdomain.com</a>.</p>
+
+</div>
+</div>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

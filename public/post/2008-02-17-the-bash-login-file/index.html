@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> The bash_login file &middot; Douglas Jarquin </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Douglas Jarquin" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Douglas Jarquin</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>The bash_login file</h1>
+  <span class="post-date">Sun, Feb 17, 2008</span>
+      
+
+<p>The /.bash_login file is a pretty good place to put your shell paths and variables for Mac’s Terminal. For future reference here is a copy of my .bash_login file:</p>
+
+<h1 id="toc_0">Path, Shell variables</h1>
+
+<p>export PATH=&ldquo;/usr/local/bin:/usr/local/sbin:$PATH&rdquo;
+export SVN_EDITOR=&ldquo;/usr/bin/mate -w&rdquo;</p>
+
+<h1 id="toc_1">Backpack</h1>
+
+<p>alias todo=&ldquo;ruby /Applications/backpack/todo.rb&rdquo;</p>
+
+<h1 id="toc_2">Finder</h1>
+
+<p>alias ot=&ldquo;open .&rdquo;</p>
+
+<h1 id="toc_3">General</h1>
+
+<p>alias code=&ldquo;cd Documents/code/&rdquo;
+alias sites=&ldquo;cd Sites/&rdquo;
+alias backup=&ldquo;. /Applications/s3backup/backup.sh&rdquo;</p>
+
+<h1 id="toc_4">Git</h1>
+
+<p>alias gst=&ldquo;git status&rdquo;
+alias gu=&ldquo;git pull&rdquo;
+alias gp=&ldquo;git push&rdquo;
+alias gd=&ldquo;git diff | mate&rdquo;
+alias gc=&ldquo;git commit -v&rdquo;
+alias gca=&ldquo;git commit -v -a&rdquo;
+alias gb=&ldquo;git branch&rdquo;
+alias gba=&ldquo;git branch -a&rdquo;</p>
+
+<h1 id="toc_5">Rails</h1>
+
+<p>alias ss=&ldquo;./script/server&rdquo;
+alias sc=&ldquo;./script/console&rdquo;
+alias sg=&ldquo;./script/generate&rdquo;
+alias sp=&ldquo;./script/plugin&rdquo;</p>
+
+<h1 id="toc_6">Ruby</h1>
+
+<p>alias sgi=&ldquo;sudo gem install&rdquo;</p>
+
+<h1 id="toc_7">s3sync</h1>
+
+<p>alias s3cmd=&ldquo;ruby /Applications/s3backup/s3cmd.rb&rdquo;</p>
+
+<h1 id="toc_8">SSH</h1>
+
+<h1 id="toc_9">Static Matic</h1>
+
+<p>alias sm=&ldquo;staticmatic&rdquo;
+alias smb=&ldquo;staticmatic build .&rdquo;
+alias smp=&ldquo;staticmatic preview .&rdquo;
+alias sms=&ldquo;staticmatic setup&rdquo;</p>
+
+<h1 id="toc_10">Subversion</h1>
+
+<p>alias sup=&ldquo;svn update&rdquo;
+alias sst=&ldquo;svn status&rdquo;
+alias scom=&ldquo;svn commit&rdquo;
+alias sd=&ldquo;svn diff | mate&rdquo;
+alias slog=&ldquo;svn log | mate&rdquo;
+alias sex=&ldquo;svn export&rdquo;
+alias srm=&ldquo;svn rm&rdquo;</p>
+
+<h1 id="toc_11">TextMate</h1>
+
+<p>alias et=&ldquo;mate .&rdquo;
+alias etr=&ldquo;mate app config lib db public test vendor/plugins&rdquo;</p>
+
+</div>
+</div>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

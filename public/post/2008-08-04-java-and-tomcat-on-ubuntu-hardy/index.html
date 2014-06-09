@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Java and Tomcat on Ubuntu Hardy &middot; Douglas Jarquin </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Douglas Jarquin" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Douglas Jarquin</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Java and Tomcat on Ubuntu Hardy</h1>
+  <span class="post-date">Mon, Aug 4, 2008</span>
+      
+
+<p>I just spent my entire morning trying to figure out how to install Tomcat on one of my servers. I needed it to demo a business intelligence application, and boy oh boy was it a pain. There is a lot of talk out there about this particular install, but nothing specifically for Ubuntu 8.04 Hardy.</p>
+
+<p>What follows is a quick guide on how to setup Java 1.6.0 and Tomcat 5.5 on a “new” Ubuntu 8.04 Hardy Heron server. We will be using apt-get to install everything, since I hate having to remember to update compiled code.</p>
+
+<p>First things first</p>
+
+<p>First make sure Ubuntu is all up to date:</p>
+
+<p>sudo apt-get update &amp;&amp; sudo apt-get upgrade</p>
+
+<p>Java</p>
+
+<p>It was a little hidden, but Ubuntu does have a very detailed how-to for installing Java here. Okay, so it is not very detailed at all. I missed it a few times, but the install steps are there.</p>
+
+<p>sudo apt-get install openjdk-6-jre openjdk-6-jdk</p>
+
+<p>OpenJDK is an open-source Java SDK implementation with support for Ubuntu 8.04 Hardy. Tomcat needs both the JRE and the JDK so make sure to install both if you have not already.</p>
+
+<p>Check on Java</p>
+
+<p>Just to make sure we are all good, run this command to verify that Java installed correctly:</p>
+
+<p>java -version</p>
+
+<p>The output should look something like this:</p>
+
+<p>java version &ldquo;1.6.0&rdquo;
+OpenJDK Runtime Environment (build 1.6.0-b09)
+OpenJDK 64-Bit Server VM (build 1.6.0-b09, mixed mode)</p>
+
+<p>Tomcat</p>
+
+<p>Tomcat was the hard part. There really is not much on the topic, since all Java Web developers are moving to Rails ;), but here is what I put together. There is a package available for Tomcat 5.5, and once installed successfully it will be running on port 8180 of your server. Let’s get to it.</p>
+
+<p>sudo apt-get install apache2 tomcat5.5 tomcat5.5-webapps tomcat5.5-admin</p>
+
+<p>Okay, I kind of let you down here, because the install will fail. Bare with me, it is all part of my plan. If you look carefully at the output you will see why Tomcat’s install failed so miserably.</p>
+
+<p>Setting up tomcat5.5 (5.5.25-5ubuntu1) &hellip;
+  * no JDK found - please set JAVA_HOME</p>
+
+<p>Don’t you just love helpful error messages. And I welcome you to the part of the installation that took me hours to figure out. What is required for Tomcat to finish its installation is a simple environment variable. A single line of code that will tell Tomcat where to find our Java install. I tried putting this in the /root/.bashrc, .bash_login, .bash_profile, and ~/.bashrc with no success. I kept thinking there was something wrong with my syntax, but nothing worked. Luckily, I ran into this blog post when doing a Google search for the terms “No JDK found”.</p>
+
+<p>As it turns out, Tomcat has its own place to set this environment variable. Jackpot! Oh, this is why we needed to let the install fail, to create this file for us.</p>
+
+<p>sudo nano /etc/default/tomcat5.5</p>
+
+<p>Then look for this line:</p>
+
+<p>#JAVA_HOME=/usr/lib/jvm/java-6-sun</p>
+
+<p>And make it look like this:</p>
+
+<p>JAVA_HOME=/usr/lib/jvm/java-6-openjdk</p>
+
+<p>Check the newly set JAVA_HOME with:</p>
+
+<p>echo $JAVA_HOME</p>
+
+<p>We did two things. First we uncommented the line, so Tomcat can parse the environment variable set here. Next, we corrected the path to our Java installation. You can check the Java path yourself by typing sudo update-alternatives &ndash;config java. Running which java or whereis java will only display symlinks.</p>
+
+<p>So now we run our Tomcat installation command again. Run the whole command again just to make sure all of the packages get installed. If they were installed successfully they will be skipped, so no harm can come from doing this.</p>
+
+<p>sudo apt-get install apache2 tomcat5.5 tomcat5.5-webapps tomcat5.5-admin</p>
+
+<p>Java and Tomcat are now successfully installed! Visit <a href="http://localhost:8180">http://localhost:8180</a> to see how all of my hard work has paid off. Just in case, here are a few useful Tomcat commands:</p>
+
+<h1 id="toc_0">Check Tomcat&rdquo;s status</h1>
+
+<p>sudo /etc/init.d/tomcat5.5 status</p>
+
+<h1 id="toc_1">Start Tomcat</h1>
+
+<p>sudo /etc/init.d/tomcat5.5 start</p>
+
+<h1 id="toc_2">Stop Tomcat</h1>
+
+<p>sudo /etc/init.d/tomcat5.5 stop</p>
+
+<p>References</p>
+
+<p>Setting up Ubuntu by Slicehost
+OpenJDK
+Java SDK on Feisty
+Java SDK on Feisty Part 2
+No JDK Found</p>
+
+</div>
+</div>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
